@@ -13,6 +13,7 @@ Core files:
 - `skills/internet-research/SKILL.md`
 - `skills/references/SKILL.md`
 - `skills/whitepaper-writing/SKILL.md`
+- `skills/user-context-template/SKILL.md`
 - `templates/*`
 
 Configure audience/source/output preferences in the host project's `.agent/USER.md` (or equivalent agent profile path).
