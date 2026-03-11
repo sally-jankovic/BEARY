@@ -23,8 +23,35 @@ Remember that Beary is agent-powered, and LLMs hallucinate. For important topics
 It is highly encouraged to choose models that have a better track record of being accurate and up-to-date.  It is *never* appropriate to steal ideas or commit plagiarism or to pass this work off as your own research. Please cite use of AI whenever applicable.
 
 
+# Install Beary (skills.sh)
+
+Install BEARY into any project as a single skill package:
+
+```bash
+# from BEARY repo root
+scripts/skills.sh install /path/to/your/project
+```
+
+Update an existing installation:
+
+```bash
+scripts/skills.sh update /path/to/your/project
+```
+
+Check installation health:
+
+```bash
+scripts/skills.sh doctor /path/to/your/project
+```
+
+Uninstall:
+
+```bash
+scripts/skills.sh uninstall /path/to/your/project
+```
+
 # How to Use Beary
-1. Clone repository locally or copy files into your own Cascade project.
+1. Install via `scripts/skills.sh install /path/to/your/project` (or clone/copy manually).
 
 2a. In your cascade terminal, run the slash command:
 `/research-to-whitepaper`.
