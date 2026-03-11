@@ -1,5 +1,7 @@
 # User Context
 
+> Note: You are currently using the default USER.md template.
+
 This file contains user-specific context that customizes how the Background Research Agent (BEARY) conducts research.
 
 ## Audience
