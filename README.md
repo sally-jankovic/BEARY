@@ -8,7 +8,11 @@
 ```
 Welcome to BEARY, the agentic workflow for Background Research!
 
-Install: `npx skills add sally-jankovic/BEARY`
+## Quickstart
+
+```bash
+npx skills add sally-jankovic/BEARY
+```
 
 For full install/update/uninstall options, see [INSTALL.md](./INSTALL.md).
 
