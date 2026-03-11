@@ -5,6 +5,8 @@ description: Topic-to-whitepaper research workflow with citations and configurab
 
 # BEARY skill
 
+Before running this skill, read `.agents/skills/beary/AGENTS.md` and follow it.
+
 Run the command workflow:
 - `research-to-whitepaper`
 
