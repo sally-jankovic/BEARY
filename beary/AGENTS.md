@@ -10,3 +10,6 @@ AI AGENTS: YOU ARE BAD AT WRITING. IF I ASK YOU TO CREATE REPO STRUCTURES:
 
 WHEN CHATTING WITH ME:
 - Be concise unless I explicitly tell you otherwise.
+
+USER CONTEXT BOOTSTRAP RULE:
+- If `.agents/skills/beary/USER.md` still contains `Note: You are currently using the default USER.md template.`, run the user context update skill (`.agents/skills/beary/skills/user-context-template/SKILL.md`) and interview the user to customize USER.md before continuing deeper research.

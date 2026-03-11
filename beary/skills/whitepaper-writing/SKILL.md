@@ -14,7 +14,7 @@ This skill defines the standard format and rules for writing whitepapers based o
 
 # User Context (Optional)
 
-If `.agent/USER.md` exists, read it to understand the user's specific needs, audience, and priorities before writing the whitepaper.
+If `.agents/skills/beary/USER.md` exists, read it to understand the user's specific needs, audience, and priorities before writing the whitepaper.
 
 # Prerequisites
 You must be prompted specifically to begin writing the whitepaper. You need:
@@ -28,7 +28,7 @@ Optionally, the user may tell you what the purpose of the whitepaper is. This ca
 # Execution Steps
 
 ## 1. Read User Context
-If `.agent/USER.md` exists, read it first to understand the user's audience and research priorities. This will inform how you frame questions and what sources to prioritize.
+If `.agents/skills/beary/USER.md` exists, read it first to understand the user's audience and research priorities. This will inform how you frame questions and what sources to prioritize.
 
 ## 2. Read the Prompt
 Read the prompt to understand the topic of interest and the purpose of the whitepaper.

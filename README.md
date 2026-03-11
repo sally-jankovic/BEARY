@@ -8,6 +8,12 @@
 ```
 Welcome to BEARY, the agentic workflow for Background Research!
 
+## Quickstart
+
+```bash
+npx skills add sally-jankovic/BEARY
+```
+
 
 # What Beary Does
 Beary is an agentic workflow that takes a simple prompt and performs internet research, takes notes, and compiles its findings into a whitepaper, complete with citations. You can customize both the audience Beary writes for as well as the sources he looks at.
@@ -24,49 +30,63 @@ It is highly encouraged to choose models that have a better track record of bein
 
 
 # How to Use Beary
-1. Clone repository locally or copy files into your own Cascade project.
+1. Install using Quickstart above.
 
-2a. In your cascade terminal, run the slash command:
-`/research-to-whitepaper`.
-2b. Then provide your topic details:
+2. Trigger BEARY in either way:
+
+```text
+/research-to-whitepaper
+```
+
+```text
+Research <topic> and create a whitepaper with citations
+Use BEARY to deep-dive <topic>
+Prepare a cited research brief on <topic>
+```
+
+3. Provide topic details when prompted:
+
+```text
 TOPIC: my-topic
 Description: What this topic is about.
 Purpose (Optional): What you want to achieve with this topic or why you are interested in it.
-2c. Press enter
+```
 
-3. The workflow will prompt you before beginning:
-a. If you do not provide a purpose, the agent will prompt you for one. You may skip it but it is recommended to give your whitepaper a narrative throughline.
-b. Choose between Hibernation mode (token-conservative) vs Hyperphagia mode (token-generous)
-c. Choose between Attended (you approve research before it begins writing) vs Unattended (it runs with no further user contact)
+4. Confirm workflow options:
+
+```text
+Mode: Hibernation or Hyperphagia
+Review flow: Attended or Unattended
+```
 
 
 # Getting Started
 
-## Set USER.md preferences
-In order to direct Beary, you need to set your preferences in the `.agent/USER.md` file for:
-- **Intended Audience** (e.g., engineer, data scientist, racing hobbyist, etc.)
-- **Desired Sources** (e.g., code repositories, academic papers, blogs, etc.)
-- **Output Path** (optional): Where completed whitepapers should be moved after the workflow completes
+## USER.md setup (interview-first)
+On first run, BEARY will interview you and generate/update:
+- `.agents/skills/beary/USER.md`
 
-### Configuring Output Path
-By default, completed whitepapers are moved to `whitepaper-output/` (which is gitignored). To customize this:
+It captures defaults for:
+- Audience level and role
+- Purpose style (exploration vs decision support)
+- Source priorities and exclusions
+- Freshness preference (e.g., 30/60/90 days)
+- Depth and contradiction strictness
+- Output path
 
-1. Open `.agent/USER.md`
-2. Find the "Output Path" section
-3. Update the path in the comment: `<!-- OUTPUT_PATH: your-custom-path -->`
+### Configuring Output Path manually (optional)
+You can still edit `.agents/skills/beary/USER.md` directly:
 
-**Path Types:**
-- **Relative paths** (e.g., `completed-research`, `docs/whitepapers`) are relative to the project root
-- **Absolute paths** (e.g., `/Users/username/Documents/research`) **MUST** be used for directories outside the repository
-- If the path fails to resolve, the workflow will fall back to `whitepaper-output/` and notify you
-
-Examples:
 ```markdown
+<!-- OUTPUT_PATH: whitepaper-output -->
 <!-- OUTPUT_PATH: completed-research -->
-<!-- OUTPUT_PATH: /Users/jankovis/Documents/beary-research -->
+<!-- OUTPUT_PATH: /Users/username/Documents/beary-research -->
 ```
 
-This keeps your workspace clean and prevents accidentally committing research artifacts.
+Path rules:
+- Relative paths are resolved from project root
+- Absolute paths are required outside the repo
+- Invalid paths fall back to `whitepaper-output/`
 
 ## Sample prompt
 ```/research-to-whitepaper TOPIC: Multi agent setups
