@@ -5,7 +5,7 @@ description: Generate or refresh `.agents/skills/beary/USER.md` from a clean tem
 
 # User Context Template
 
-Create or update `.agents/skills/beary/USER.md` using the template at `../../templates/user-context-template.md`.
+Create or update `.agents/skills/beary/USER.md` using the template at `.agents/skills/beary/templates/user-context-template.md`.
 
 ## Rules
 
