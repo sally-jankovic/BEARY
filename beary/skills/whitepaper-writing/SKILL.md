@@ -14,7 +14,7 @@ This skill defines the standard format and rules for writing whitepapers based o
 
 # User Context (Optional)
 
-If `.agent/USER.md` exists, read it to understand the user's specific needs, audience, and priorities before writing the whitepaper.
+If `.agents/skills/beary/USER.md` exists, read it to understand the user's specific needs, audience, and priorities before writing the whitepaper.
 
 # Prerequisites
 You must be prompted specifically to begin writing the whitepaper. You need:
@@ -28,22 +28,22 @@ Optionally, the user may tell you what the purpose of the whitepaper is. This ca
 # Execution Steps
 
 ## 1. Read User Context
-If `.agent/USER.md` exists, read it first to understand the user's audience and research priorities. This will inform how you frame questions and what sources to prioritize.
+If `.agents/skills/beary/USER.md` exists, read it first to understand the user's audience and research priorities. This will inform how you frame questions and what sources to prioritize.
 
 ## 2. Read the Prompt
 Read the prompt to understand the topic of interest and the purpose of the whitepaper.
 
 ## 3. Read the Notes and References
-Read the `notes/{TOPIC}-notes.md` file (and any `{subtopic}-notes.md` files) along with `whitepaper/{TOPIC}-references.md` to understand the content for the whitepaper. Take note of topics that are:
+Read the `beary-scratchpad/{TOPIC}/notes/{TOPIC}-notes.md` file (and any `{subtopic}-notes.md` files) along with `beary-scratchpad/{TOPIC}/whitepaper/{TOPIC}-references.md` to understand the content for the whitepaper. Take note of topics that are:
 - widely agreed upon
 - up for debate
 - interesting or creative solutions and approaches
 
 ## 4. Outline the Whitepaper
-Using the `.templates/whitepaper.md` template, create an outline in the `whitepaper/{TOPIC}-whitepaper.md` file. Fill in the section headers based on the notes and references.
+Using the `.agents/skills/beary/templates/whitepaper.md` template, create an outline in the `beary-scratchpad/{TOPIC}/whitepaper/{TOPIC}-whitepaper.md` file. Fill in the section headers based on the notes and references.
 
 ## 5. Write the Whitepaper
-Fill in each section of the `whitepaper/{TOPIC}-whitepaper.md` file based on the notes and references.
+Fill in each section of the `beary-scratchpad/{TOPIC}/whitepaper/{TOPIC}-whitepaper.md` file based on the notes and references.
 
 After the introduction, for each section, fill in the paper in the following steps:
 1. Synthesize the research findings from the notes section with relevant citations from the references section.

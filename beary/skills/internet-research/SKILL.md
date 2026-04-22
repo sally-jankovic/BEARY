@@ -16,7 +16,7 @@ By *research*, we mean internet searches of relevant literature, blogs, technica
 
 # User Context (Optional)
 
-If `.agent/USER.md` exists, read it to understand the user's specific needs, audience, and priorities before beginning research.
+If `.agents/skills/beary/USER.md` exists, read it to understand the user's specific needs, audience, and priorities before beginning research.
 
 # Prerequisites
 You must be prompted specifically to begin research. You need:
@@ -47,20 +47,20 @@ Token-generous mode. Beary is bulking up before hibernation — eat those tokens
 # Execution Steps
 
 ## 1. Read User Context
-If `.agent/USER.md` exists, read it first to understand the user's audience and research priorities. This will inform how you frame questions and what sources to prioritize.
+If `.agents/skills/beary/USER.md` exists, read it first to understand the user's audience and research priorities. This will inform how you frame questions and what sources to prioritize.
 
 ## 2. Read the Prompt
 Read the prompt to understand the topic of interest and the purpose of the research.
 
 ## 3. Directory Setup
-Using the given TOPIC, create a folder in the root directory with the name TOPIC. Within TOPIC, create a folder named `notes` and a folder named `whitepaper`. Create the following files using the specified templates:
+Using the given TOPIC, create a working folder under `beary-scratchpad/{TOPIC}`. Within this folder, create `notes` and `whitepaper` directories. Create the following files using templates from `.agents/skills/beary/templates/`:
 
-| File | Template |
+| File (under `beary-scratchpad/{TOPIC}/`) | Template |
 |------|----------|
-| `notes/{TOPIC}-research-questions.md` | `.templates/topic-research-questions.md` |
-| `notes/{TOPIC}-notes.md` | `.templates/topic-notes.md` |
-| `whitepaper/{TOPIC}-references.md` | `.templates/references.md` |
-| `whitepaper/{TOPIC}-whitepaper.md` | `.templates/whitepaper.md` |
+| `notes/{TOPIC}-research-questions.md` | `.agents/skills/beary/templates/topic-research-questions.md` |
+| `notes/{TOPIC}-notes.md` | `.agents/skills/beary/templates/topic-notes.md` |
+| `whitepaper/{TOPIC}-references.md` | `.agents/skills/beary/templates/references.md` |
+| `whitepaper/{TOPIC}-whitepaper.md` | `.agents/skills/beary/templates/whitepaper.md` |
 
 ## 4. Research
 
@@ -68,7 +68,7 @@ Using the given TOPIC, create a folder in the root directory with the name TOPIC
 You must gain a general understanding of the topic before diving in deeper.
 
 #### 4.1.1. General Research Questions
-Before beginning research, use the given TOPIC, description, and purpose to generate research questions. List your questions in the `{TOPIC}-research-questions.md` file under the heading "General Understanding". 
+Before beginning research, use the given TOPIC, description, and purpose to generate research questions. List your questions in the `beary-scratchpad/{TOPIC}/notes/{TOPIC}-research-questions.md` file under the heading "General Understanding". 
 
 **HIBERNATION mode:** Generate **2** *general research questions* (add a 3rd only if the topic clearly requires it). Include **2** internet search terms per question (add more only if initial searches are insufficient).
 
@@ -77,14 +77,14 @@ Before beginning research, use the given TOPIC, description, and purpose to gene
 You may use your general knowledge of software engineering, machine learning, and other relevant technical topics to inform these questions.
 
 #### 4.1.2 Notes on General Understanding
-Your answers should go under the heading "General Understanding" in the `{TOPIC}-notes.md` file. *Organize your notes by question, not source.* 
+Your answers should go under the heading "General Understanding" in the `beary-scratchpad/{TOPIC}/notes/{TOPIC}-notes.md` file. *Organize your notes by question, not source.* 
 
 For each research question, complete the following steps.
 
-1. Create a subsection for the question in the "General Understanding" section of the `{TOPIC}-notes.md` file.
+1. Create a subsection for the question in the "General Understanding" section of the `beary-scratchpad/{TOPIC}/notes/{TOPIC}-notes.md` file.
 2. Using your question's first search term, find some sources on the internet that answer your questions. 
-3. Read the sources. For each source that answers your questions, add the source to the list of citations in the `whitepaper/{TOPIC}-references.md` file. 
-4. Write down your answers to the questions in the "General Understanding" section of the `{TOPIC}-notes.md` file *with citation*.
+3. Read the sources. For each source that answers your questions, add the source to the list of citations in the `beary-scratchpad/{TOPIC}/whitepaper/{TOPIC}-references.md` file. 
+4. Write down your answers to the questions in the "General Understanding" section of the `beary-scratchpad/{TOPIC}/notes/{TOPIC}-notes.md` file *with citation*.
 5. Repeat steps 2-4 for each search term under the question.
 6. **Sufficiency check (HIBERNATION mode only):** Before starting the next question, review what you have learned. If the research goal can already be answered with the information gathered, you may skip remaining questions and proceed to synthesis. **In HYPERPHAGIA mode, skip this check and continue to all questions.**
 7. Repeat steps 1-6 for each research question.
@@ -95,9 +95,9 @@ Once all general research questions have been answered (or skipped due to suffic
 
 ### 4.2 In-depth Research
 #### 4.2.1 In-depth Research Questions
-In order to generate deeper questions, use the General Understanding Section of `{TOPIC}-notes.md` in the following way:
+In order to generate deeper questions, use the General Understanding Section of `beary-scratchpad/{TOPIC}/notes/{TOPIC}-notes.md` in the following way:
 - Read the Section, making particular notes of where there are sources with multiple (more than 2) citations. Treat these as more reliable sources. Also take note of conflicting sources. Treat these as places for deeper understanding.
-- Create a new section in the `{TOPIC}-research-questions.md` file under the heading "Deeper Dive".
+- Create a new section in the `beary-scratchpad/{TOPIC}/notes/{TOPIC}-research-questions.md` file under the heading "Deeper Dive".
 **HIBERNATION mode:**
 - **Default to straightforward.** Only classify as "complex" if the topic clearly has 3+ distinct subtopics that cannot be covered coherently in a single notes file. Most topics should remain straightforward.
   - If the topic is straightforward (default), generate **1-2** *in-depth research questions* with **2** internet search terms for each question.
@@ -121,10 +121,10 @@ Choose the following instructions based on whether your topic is straightforward
 ##### 4.2.2.1 Straightforward Topics
 For each research question, complete the following steps.
 
-1. Create a new section for the question in the "Deeper Dive" section of the `{TOPIC}-notes.md` file.
+1. Create a new section for the question in the "Deeper Dive" section of the `beary-scratchpad/{TOPIC}/notes/{TOPIC}-notes.md` file.
 2. Using your question's first search term, find some sources on the internet that answer your questions. 
-3. Read the sources. For each source that answers your questions, add the source to the list of citations in the `whitepaper/{TOPIC}-references.md` file. 
-4. Write down your answers to the questions in the "Deeper Dive" section of the `{TOPIC}-notes.md` file *with citation*.
+3. Read the sources. For each source that answers your questions, add the source to the list of citations in the `beary-scratchpad/{TOPIC}/whitepaper/{TOPIC}-references.md` file. 
+4. Write down your answers to the questions in the "Deeper Dive" section of the `beary-scratchpad/{TOPIC}/notes/{TOPIC}-notes.md` file *with citation*.
 5. Repeat steps 2-4 for each search term under the question.
 6. Repeat steps 1-5 for each research question.
 
@@ -134,10 +134,10 @@ Once all in-depth research questions have been answered, synthesize the "Deeper 
 
 ##### 4.2.2.2 Complex Topics
 For each subtopic, complete the following steps.
-1. Create a new file called `{subtopic}-notes.md` for your subtopic using the `.templates/subtopic-notes.md` template.
+1. Create a new file called `{subtopic}-notes.md` for your subtopic using the `.agents/skills/beary/templates/subtopic-notes.md` template.
 2. For each question in the subtopic, create a new section in the `{subtopic}-notes.md` file.
 3. Using your question's first search term, find some sources on the internet that answer your questions. 
-4. Read the sources. For each source that answers your questions, add the source to the list of citations in the `whitepaper/{TOPIC}-references.md` file. 
+4. Read the sources. For each source that answers your questions, add the source to the list of citations in the `beary-scratchpad/{TOPIC}/whitepaper/{TOPIC}-references.md` file. 
 5. Write down your answers to the questions in the section of the `{subtopic}-notes.md` file *with citation*.
 6. Repeat steps 3-5 for each search term under the question.
 7. Repeat steps 2-6 for each question in the subtopic.
@@ -149,12 +149,12 @@ Once all questions in the subtopic have been answered, synthesize the subtopic:
 
 
 ## 5. Review and Synthesize
-Review the notes and citations in the `whitepaper/{TOPIC}-references.md` file.
+Review the notes and citations in the `beary-scratchpad/{TOPIC}/whitepaper/{TOPIC}-references.md` file.
 
 ### 5.1 Review and Clarify
 These steps will get the notes in a readable form to write the whitepaper. Follow these steps for the {TOPIC}-notes.md file and any subsequent subtopic notes files, *one file at a time*.
 
-1. Review the notes and citations in the `whitepaper/{TOPIC}-references.md` file. Correct any citations that are incorrect or point to non-existent sources.
+1. Review the notes and citations in the `beary-scratchpad/{TOPIC}/whitepaper/{TOPIC}-references.md` file. Correct any citations that are incorrect or point to non-existent sources.
 2. Identify and flag any points that contradict each other, or any points that seem unsubstantiated or go against common knowledge.
 3. Ensure the existing synthesis summaries are accurate and complete. Make minor edits for clarity if needed, but do not re-synthesize. 
 
@@ -169,11 +169,11 @@ After editing the notes, run this final check to ensure note quality.
 
 | Purpose | Template Path |
 |---------|---------------|
-| Research questions | `.templates/topic-research-questions.md` |
-| Topic notes (straightforward) | `.templates/topic-notes.md` |
-| Subtopic notes (complex) | `.templates/subtopic-notes.md` |
-| References/bibliography | `.templates/references.md` |
-| Whitepaper | `.templates/whitepaper.md` |
+| Research questions | `.agents/skills/beary/templates/topic-research-questions.md` |
+| Topic notes (straightforward) | `.agents/skills/beary/templates/topic-notes.md` |
+| Subtopic notes (complex) | `.agents/skills/beary/templates/subtopic-notes.md` |
+| References/bibliography | `.agents/skills/beary/templates/references.md` |
+| Whitepaper | `.agents/skills/beary/templates/whitepaper.md` |
 
 
 # Best Practices

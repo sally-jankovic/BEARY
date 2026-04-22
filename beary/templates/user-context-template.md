@@ -14,11 +14,11 @@ If the user shares the purpose of the research, use it to narrow down the search
 
 ## Priorities
 
-When researching, we should prioritize the following:
-- Sources from academic literature and documentation and releases from well-known organizations and established expert media outlets. (e.g., Reuters for questions on finance)
-- Online wikis and documentation
+When researching, prioritize:
+- Sources from academic literature, official documentation, and releases from well-known organizations and established expert media outlets
+- Online wikis and technical documentation
 
-Do not use sources from:
+Avoid sources from:
 - Unknown blogs and unverified forums
 
 ## Output Path

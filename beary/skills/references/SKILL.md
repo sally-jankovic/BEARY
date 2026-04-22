@@ -80,4 +80,4 @@ Multiple studies have confirmed this effect [1][3][7].
 4. **Publication date is required** — use `n.d.` only when genuinely unavailable.
 5. **Access date is always required** — record the date the agent accessed the source.
 6. **IDs must be sequential** — numbered `[1]`, `[2]`, `[3]`, etc., in the order they first appear in the whitepaper.
-7. **Use the template** at `.templates/references.md` for the bibliography file structure.
+7. **Use the template** at `.agents/skills/beary/templates/references.md` for the bibliography file structure.
